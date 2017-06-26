@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='IE=edge' http-equiv='X-UA-Compatible'>
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <title>Date</title>
+    <!-- %link(rel="shortcut icon" href="img/favicon.png") -->
+    <link href='./css/styles.css' rel='stylesheet'>
+    <script src='./js/jquery.min.js'></script>
+    <script src='./js/main.js'></script>
+    <!-- %script{ :src => "./js/bootstrap.min.js"} -->
+  </head>
+  <body>
+    <!-- .circle-box -->
+    <!-- .right -->
+    <!-- .circle -->
+    <!-- .left -->
+    <!-- .circle -->
+    <div class='pull-right menu'>
+      <div class='btn'>
+        <div class='line'></div>
+        <div class='line'></div>
+        <div class='line'></div>
+      </div>
+    </div>
+    <div class='time-block'>
+      <div class='circle-box'>
+        <div class='right'>
+          <div class='circle'></div>
+        </div>
+        <div class='left'>
+          <div class='circle'></div>
+        </div>
+        <div class='count'>100</div>
+      </div>
+    </div>
+    <div class='time-add'>
+      <form class='add-time'>
+        <div class='radio m-2'>
+          <label class='time'>
+            <input checked class='radio' name='timeType' type='radio' value='m'>
+            <span>分 鐘</span>
+          </label>
+          <label class='time'>
+            <input class='radio' name='timeType' type='radio' value='h'>
+            <span>小 時</span>
+          </label>
+        </div>
+        <div class='m-8'>
+          <input class='input' min='0' name='time' type='number' value='0'>
+          <input class='time-send' type='submit' value='送 出'>
+        </div>
+      </form>
+    </div>
+    <div class='date'>
+      <div class='border'>
+        <div class='header'>
+          <div class='curr'>
+            <div class='prev pull-left'><</div>
+            <div class='cur'></div>
+            <div class='next pull-right'>></div>
+          </div>
+          <ul class='day'>
+            <li>日</li>
+            <li>一</li>
+            <li>二</li>
+            <li>三</li>
+            <li>四</li>
+            <li>五</li>
+            <li>六</li>
+          </ul>
+        </div>
+        <div class='body'>
+          <div class='day'>1</div>
+          <div class='day'>2</div>
+          <div class='day'>3</div>
+          <div class='day'>4</div>
+          <div class='day'>5</div>
+          <div class='day'>6</div>
+          <div class='day'>7</div>
+          <div class='day'>8</div>
+          <div class='day'>9</div>
+          <div class='day'>10</div>
+          <div class='day'>11</div>
+          <div class='day'>12</div>
+          <div class='day'>13</div>
+          <div class='day'>14</div>
+          <div class='day'>15</div>
+          <div class='day'>16</div>
+          <div class='day'>17</div>
+          <div class='day'>18</div>
+          <div class='day'>19</div>
+          <div class='day'>20</div>
+          <div class='day'>21</div>
+          <div class='day'>22</div>
+          <div class='day'>23</div>
+          <div class='day'>24</div>
+          <div class='day'>25</div>
+          <div class='day'>26</div>
+          <div class='day'>27</div>
+          <div class='day'>28</div>
+          <div class='day'>29</div>
+          <div class='day'>30</div>
+        </div>
+        <div class='footer'>
+          <ul>
+            <li>
+              尚未記入任何事項
+              <div class='del'>x</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class='target'>
+      <form>
+        <input name='target' placeholder='請輸入您的目標' type='text'>
+        <input name='addTarget' type='submit' value='✚'>
+      </form>
+      <div class='des'>
+        <div class='text'>
+          <span>一二三四五六七八九十一二三四五六七</span>
+        </div>
+        <div class='pull-right btn'>
+          <div class='del'>x</div>
+        </div>
+      </div>
+      <div class='des'>
+        <div class='text'>
+          <span>一二三四五六七八九十一二三四五六七</span>
+        </div>
+        <div class='pull-right btn'>
+          <div class='del'>x</div>
+        </div>
+      </div>
+      <div class='des'>
+        <div class='text'>
+          <span>一二三四五六七八九十一二三四五六七</span>
+        </div>
+        <div class='pull-right btn'>
+          <div class='del'>x</div>
+        </div>
+      </div>
+    </div>
+    <!-- %form.input -->
+    <!-- %input(name = 'name') -->
+    <!-- %input(name = 'mail') -->
+    <!-- %button.btn.btn-submit Submit -->
+  </body>
+</html>
+
