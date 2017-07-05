@@ -172,11 +172,13 @@ $(document).ready(function(){
 		if(username == null) return alert('請輸入名稱');
 		mail = prompt('請輸入信箱', '');
 		if(mail == null) return alert('請輸入信箱');
+		$('body').append('<div class = "loading"><span>Loading...</span></div>');
 		$.ajax({
 			url: m_server + 'user',
 			data: {'username': username, 'mail': mail},
 			type: 'post',
 			success: function (data) {
+				$('.loading').remove();
 				switch($.type(data)){
 					case 'string':
 						if(data.indexOf('Error') == -1){
@@ -209,11 +211,13 @@ $(document).ready(function(){
 	}
 
 	$('.btn-submit').click(function(){
+		$('body').append('<div class = "loading"><span>Loading...</span></div>');
 		$.ajax({
 			url: m_server + 'quotes',
 		 	data: $('form').serializeArray(),
 			type: 'post',
 			success: function (data) {
+				$('.loading').remove();
 				console.log("recive data: " + data); 
 			}
 		});
