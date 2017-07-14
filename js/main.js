@@ -85,9 +85,12 @@ $(document).ready(function(){
 
 	$('body').on('click', '.day.mark', function(e){
 		for(var i = 0 ; i < m_userData.days.length ; ++i){
+			//console.log('db = ' + new Date(m_userData.days[i].day).toDateString());
+			//console.log('client = ' + new Date(m_head_year, m_head_month - 1, $(this).text()).toDateString());
 			if(new Date(m_userData.days[i].day).toDateString() == new Date(m_head_year, m_head_month - 1, $(this).text()).toDateString()){
-				$('.footer > ul > li').html('今日時數總計：' + m_userData.days[i].value + ' 分鐘 <div class = "pull-right del">x</div>');
-				console.log('choose day value = ' + m_userData.days[i].value);
+				$('.footer > ul > li').html('今日時數總計：' + m_userData.days[i+1].value + ' 分鐘 <div class = "pull-right del">x</div>');
+				//console.log('choose day value = ' + new Date(m_userData.days[i].day).toDateString());
+				//console.log('choose day value = ' + m_userData.days[i+1].value);
 				break;
 			};
 		};
