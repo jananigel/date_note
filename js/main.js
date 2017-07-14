@@ -87,7 +87,7 @@ $(document).ready(function(){
 		for(var i = 0 ; i < m_userData.days.length ; ++i){
 			if(new Date(m_userData.days[i].day).toDateString() == new Date(m_head_year, m_head_month - 1, $(this).text()).toDateString()){
 				$('.footer > ul > li').html('今日時數總計：' + m_userData.days[i].value + ' 分鐘 <div class = "pull-right del">x</div>');
-				console.log('choose day = ' + m_userData.days[i].value);
+				console.log('choose day value = ' + m_userData.days[i].value);
 				break;
 			};
 		};
@@ -126,7 +126,7 @@ $(document).ready(function(){
 		for(var i = 0 ; i < daysCount ; ++i){
 			var getDate = new Date(m_userData.days[i].day);
 			if(getDate.getFullYear() == m_head_year && getDate.getMonth() == m_head_month - 1){
-				var index = $('.date > .border > .body > .day').index($('.date > .border > .body > .day[date-value = ' + getDate.getDate() + ']')) + 1;
+				var index = $('.date > .border > .body > .day').index($('.date > .border > .body > .day[date-value = ' + getDate.getDate() + ']'));
 				$('.date > .border > .body > .day:nth-child(' + index + ')').addClass('mark');
 				var dayDiv = $('.date > .border > .body > .day:nth-child(' + index + ')');
 				if(parseInt(dayDiv.text()) < 10){
@@ -164,7 +164,8 @@ $(document).ready(function(){
 
 	var username, mail;
 	var m_userData;
-	var m_server = 'https://date-note.herokuapp.com/';
+	//var m_server = 'https://date-note.herokuapp.com/';
+	var m_server = 'http://127.0.0.1:3001/'
 	initUser();
 
 	function initUser(){
@@ -271,7 +272,7 @@ $(document).ready(function(){
 					for(var i = 0 ; i < daysCount ; ++i){
 						var getDate = new Date(data.days[i].day);
 						if(getDate.getFullYear() == m_head_year && getDate.getMonth() == m_head_month - 1){
-							var index = $('.date > .border > .body > .day').index($('.date > .border > .body > .day[date-value = ' + getDate.getDate() + ']')) + 1;
+							var index = $('.date > .border > .body > .day').index($('.date > .border > .body > .day[date-value = ' + getDate.getDate() + ']'));
 							$('.date > .border > .body > .day:nth-child(' + index + ')').addClass('mark');
 							var dayDiv = $('.date > .border > .body > .day:nth-child(' + index + ')');
 							if(parseInt(dayDiv.text()) < 10){
