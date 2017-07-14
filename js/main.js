@@ -167,8 +167,8 @@ $(document).ready(function(){
 
 	var username, mail;
 	var m_userData;
-	var m_server = 'https://date-note.herokuapp.com/';
-	//var m_server = 'http://127.0.0.1:3001/'
+	//var m_server = 'https://date-note.herokuapp.com/';
+	var m_server = 'http://127.0.0.1:3001/'
 	initUser();
 
 	function initUser(){
@@ -272,8 +272,10 @@ $(document).ready(function(){
 					timeInput.val('0');
 					m_userData = data;
 					var daysCount = data.days.length;
+					console.log('addTime days count = ' + daysCount);
 					for(var i = 0 ; i < daysCount ; ++i){
 						var getDate = new Date(data.days[i].day);
+						console.log('addTime getDate = ' + getDate);
 						if(getDate.getFullYear() == m_head_year && getDate.getMonth() == m_head_month - 1){
 							var index = $('.date > .border > .body > .day').index($('.date > .border > .body > .day[date-value = ' + getDate.getDate() + ']'));
 							$('.date > .border > .body > .day:nth-child(' + index + ')').addClass('mark');
