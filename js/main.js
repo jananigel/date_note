@@ -164,8 +164,8 @@ $(document).ready(function(){
 
 	var username, mail;
 	var m_userData;
-	//var m_server = 'https://date-note.herokuapp.com/';
-	var m_server = 'http://127.0.0.1:3001/'
+	var m_server = 'https://date-note.herokuapp.com/';
+	//var m_server = 'http://127.0.0.1:3001/'
 	initUser();
 
 	function initUser(){
